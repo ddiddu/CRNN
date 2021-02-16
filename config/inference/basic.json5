@@ -8,7 +8,7 @@
         "module": "dataset.dataset_enhancement",
         "main": "Dataset",
         "args": {
-            "noisy_dataset": "~/Datasets/SEGAN_Dataset/noisy_testset_wav",
+            "noisy_dataset": "~/worksapce/CRNN/Datasets/SEGAN_Dataset/noisy_testset_wav",
             "limit": null,
             "offset": 0,
             "sr": 16000
