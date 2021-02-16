@@ -5,6 +5,8 @@ from tqdm import tqdm
 from inferencer.base_inferencer import BaseInferencer
 from inferencer.inferencer_full_band import full_band_no_truncation
 
+import soundfile as sf
+
 
 @torch.no_grad()
 def inference_wrapper(
@@ -24,8 +26,10 @@ def inference_wrapper(
             noisy, enhanced = full_band_no_truncation(model, device, inference_args, noisy)
         else:
             raise NotImplementedError(f"Not implemented Inferencer type: {inference_args['inference_type']}")
-
-        librosa.output.write_wav(enhanced_dir / f"{name}.wav", enhanced, sr=16000)
+        
+        # module 'librosa' has no attribute 'output'
+        # librosa.output.write_wav(enhanced_dir / f"{name}.wav", enhanced, sr=16000)
+        sf.write(enhanced_dir / f"{name}.wav", enhanced, 16000)
 
 
 class Inferencer(BaseInferencer):

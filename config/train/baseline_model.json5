@@ -6,7 +6,7 @@
     "trainer": {
         "module": "trainer.causal_trainer",
         "main": "Trainer",
-        "epochs": 500,
+        "epochs": 8,
         "save_checkpoint_interval": 1,
         "validation": {
             "interval": 1,
@@ -38,7 +38,7 @@
         "module": "dataset.dataset_variable_length_input",
         "main": "Dataset",
         "args": {
-            "dataset_list": "~/worksapce/CRNN/Datasets/SEGAN_Dataset/train_dataset.txt",
+            "dataset_list": "~/workspace/CRNN/Datasets/SEGAN_Dataset/train_dataset.txt",
             "limit": null,
             "offset": 0,
             "sr": 16000,
@@ -51,7 +51,7 @@
         "module": "dataset.dataset_variable_length_input",
         "main": "Dataset",
         "args": {
-            "dataset_list": "~/worksapce/CRNN/Datasets/SEGAN_Dataset/test_dataset.txt",
+            "dataset_list": "~/workspace/CRNN/Datasets/SEGAN_Dataset/test_dataset.txt",
             "limit": null,
             "offset": 0,
             "sr": 16000,
@@ -61,7 +61,7 @@
         },
     },
     "train_dataloader": {
-        "batch_size": 32,
+        "batch_size": 8,
         "num_workers": 40,
         "shuffle": true,
         "pin_memory": true
