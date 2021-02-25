@@ -116,3 +116,4 @@ if __name__ == '__main__':
     layer = CRN()
     a = torch.rand(2, 1, 161, 200)
     print(layer(a).shape)
+    # torch.Size([2, 1, 161, 200])
